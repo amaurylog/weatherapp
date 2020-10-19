@@ -1,0 +1,59 @@
+﻿@model Geolocalizacion.Models.Ubicacion
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Ubicacion</h4>
+<hr />
+
+<div id="map" style="height: 500px; width: 100%"></div>
+
+<div class="row">
+    <div class="col-md-4">
+        @*<form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Latitud" class="control-label"></label>
+                <input asp-for="Latitud" class="form-control txtLatitud" id="txtLatitud" />
+                <span asp-validation-for="Latitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Longuitud" class="control-label"></label>
+                <input asp-for="Longuitud" class="form-control txtLonguitud" id="txtLonguitud" />
+                <span asp-validation-for="Longuitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Temperatura" class="control-label"></label>
+                <input asp-for="Temperatura" class="form-control txtTemperatura" id="txtTemperatura" />
+                <span asp-validation-for="Temperatura"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Humedad" class="control-label"></label>
+                <input asp-for="Humedad" class="form-control txtHumedad" id="txtHumedad" />
+                <span asp-validation-for="Humedad"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>*@
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+    <button class="btn btn-dark btn-sm" id="verRegistrosJson">Ver Registros</button>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript" src="~/js/Mapa.js" asp-append-version="true"></script>
+}

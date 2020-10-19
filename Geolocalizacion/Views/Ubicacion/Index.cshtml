@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Geolocalizacion.Models.Ubicacion>
+
+@{
+    ViewData["Title"] = "Estaciones";
+}
+
+<div class="infoTitle">
+    <h4>Administración de Estaciones Climáticas</h4>
+    <p>Estaciones del Clima</p>
+</div>
+<div class="row mt-3 top">
+
+    <div class="col-5">
+
+        <div class="cardsWeather" style="overflow-y: scroll; height: 500px;">
+
+        </div>
+
+    </div>
+
+    <div class="col-7">
+        <div class="mapMarkersInfo" id="map"></div>
+    </div>
+
+</div>
+
+<div class="row mt-3">
+
+    <div class="col-6">
+        <div class="card m-0 p-0">
+            <div class="card-body">
+                <div class="infoTitle">
+                    <h5>Grafico Barras</h5>
+                </div>
+                <canvas id="chartBar" width="400px" height="200px"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card m-0 p-0">
+            <div class="card-body">
+                <div class="infoTitle">
+                    <h5>Grafico Lineal</h5>
+                </div>
+                <canvas id="chartLine" width="400px" height="200px"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @*<script src="~/js/leaflet.js" asp-append-version="true"></script>*@
+    <script src="~/js/Mapa.js" asp-append-version="true"></script>
+}
